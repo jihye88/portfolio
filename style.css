@@ -7,8 +7,9 @@
   --color-pink: #ffa4a2;
   --color-dark-pink: #e57373;
   --color-black: #263238;
-  --color-dark-grey: #4f5b62;
-  --color-grey: #819ca9;
+  --color-dark-grey: #5b5f61;
+  --color_light_grey:#a6aaac;
+  --color-grey: #757779;
   --color-blue: #a8e2eb;
   --color-yellow: #ffffcf;
   --color-black: #000000;
@@ -32,8 +33,6 @@
   --animation-duration: 300ms;
 }
  
- 
-
 /* Universal tags */
 * {
   box-sizing: border-box;
@@ -45,10 +44,12 @@ body {
     cursor: default;
 
 }
+
 a {
   text-decoration: none;
   color: var(--color-white);
 }
+
 ul {
   list-style: none;
   padding-left: none;
@@ -60,6 +61,7 @@ button{
     border: none;
     outline: none;
 }
+
 /*Typography*/
 h1 {
   font-size: var(--font-large);
@@ -67,18 +69,21 @@ h1 {
   color: var(--color-black);
   margin: 16px 0;
 }
+
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0px;
 }
+
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 8px 0;
 }
+
 p {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
@@ -100,41 +105,48 @@ p {
   display: flex;
 
 }
+
 .navbar__logo{
     font-size: var(--font-regular);
     font-weight: var(--weight-semi-bold);
 }
+
 .navbar__menu__item {
   padding: 10px 12px;
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
-  
 }
+
 .navbar__menu__item.active{
     border: 1px solid var(--color-white);
     
 }
+
 .navbar__menu__item:hover{
     background-color: var(--color-dark-pink);
     
 }
+
 /* Home */
 #home{
     background: url('imgs/homebackground.png') center/cover no-repeat;    
     padding: 40px;
     text-align: center;
 } 
+
 .home__avatar{
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 2px solid var(--color-light-white) ;
 }
+
 .home__title,
 .home__discription{
     color: var(--color-white);
 }
+
 .home__contact{
     color: var(--color-white);
     font-size: var(--font-regular);
@@ -150,16 +162,22 @@ p {
 .section{
     padding: 50px;
     text-align: center;
-    max-width: 1200px;
     margin:  auto;
 }
+
+.section__container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
 .about__majors{
           
     display: flex;
     justify-content: space-between;
     margin: 80px;
-
 }
+
 .major__icon{
     width: 170px;
     height: 170px;      
@@ -171,9 +189,11 @@ p {
     margin-bottom: 16px;
     color: var(--color-blue);
 }
+
 .major__icon i {
     transition: all var(--animation-duration) ease;
 }
+
 .major__icon:hover i {
     color: var(--color-pink);
     transform: rotate(-30deg) scale(1.1);
@@ -183,30 +203,100 @@ p {
 .major__title, .major__description{
     color: var(--color-dark-grey);
 }
+
 .major__description{
     font-size: var(--font-small);
 }
+
 .job{
    display: flex;
    align-items: center;  
    justify-content: center;
-   
 }
+
 .job__description{
     margin: 0 16px;
     text-align-last: left;
 }
+
 .job__log{
     width: 200px;
     height: 50px;
 }
+
 .job__name, 
 .job__period{
     color: var(--color-dark-grey);
 }
+
 .job__name{
     font-size: var(--font-small);
 }
+
 .job__period{
     font-size: var(--font-micro);
+}
+
+/* Skill */
+
+#skills{
+  background-color: var(--color-yellow);
+}
+.skillset{
+  display: flex;
+  background-color: var(--color_light_grey);
+  color: var(--color-light-white);
+  margin: 20px 0 ;
+
+}
+
+.skillset__title{
+  color: var(--color-white);
+}
+
+.skillset__left{
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+  }
+
+.skill__value {
+  /* width: 100%; */
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+  padding: 20px;
+}
+
+.tools__list,
+.etc__list {
+  padding-left: 0px;
 }
