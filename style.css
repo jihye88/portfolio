@@ -378,13 +378,14 @@ p {
 
 .project:hover .project__description {
   opacity: 0.8;
+  transform: translateY(0px);
 }
 .project__description h3{
   color: var(--color-white);
-  transform: translateY(10px);
+  
 }
 
-.project__description h3::after{
+.project__description h3:after{
   content: '';
   display: block;
   position: relative;
